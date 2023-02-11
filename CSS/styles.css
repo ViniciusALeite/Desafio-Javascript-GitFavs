@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+
+    --ff-heading: 'Roboto Mono', monospace;
+    --ff-texting: 'Roboto', sans-serif;
+
+    --fc-text1:hsla(240, 9%, 89%, 1);
+    --fc-text2: hsla(355, 91%, 66%, 1);
+    --fc-text3: hsla(240, 6%, 51%, 1);
+    --fc-text4: hsla(195, 91%, 25%, 1);
+    --fc-text5: hsla(240, 9%, 89%, 1);
+    --fc-input: hsla(240, 6%, 51%, 1);
+
+    --bg-tbody1: hsla(194, 72%, 13%, 1);
+    --bg-thead2: hsla(195, 89%, 14%, 1);
+    --bg-screen1: hsla(192, 63%, 3%, 1);
+    --bg-input: hsla(191, 65%, 7%, 1);
+
+    --bg-tr1: hsla(195, 61%, 6%, 0.5);
+    --bg-tr2: hsla(191, 31%, 42%, 1);
+
+    --bg-button1: hsla(195, 91%, 25%, 1);
+    --bg-button2: hsla(0, 0%, 100%, 1);
+
+    --bg-assets1: hsla(189, 4%, 32%, 1);
+    --bg-assets1: hsla(195, 91%, 25%, 1);
+}
+body {
+    font-size: 1.6rem;
+    background: #000000;
+    display: grid;
+    place-content: center;
+    padding: 11.5rem;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-content {
+    border: 1px solid #4A808C;
+    border-radius: 5px;
+}
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8.7rem;
+}
+header img {
+    margin-right: 28.6rem;
+}
+header input {
+    margin-right: .8rem;
+    background: var(--bg-input);
+    border: none;
+    width: 46.2rem;
+    height: 4.8rem;
+    padding-left: 2rem;
+    border-radius: 5px;
+    color: var(--fc-input);
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+header button {
+    background: var(--bg-button1);
+    font-family: var(--ff-texting);
+    color: var(--fc-text1);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    width: 17rem;
+    height: 5.1rem;
+    padding: .8rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    cursor: pointer;
+}
+header button:hover {
+    background: var(--bg-button2);
+    color: var(--bg-assets1);
+}
+button:hover svg path {
+    fill: var(--bg-assets1);
+}
+table {
+    width: 112rem;
+    border-collapse: collapse;
+}
+table thead tr{
+    background-color: var(--bg-thead2);
+    height: 6.4rem;
+    font-family: var(--ff-texting);
+    font-size: 2rem;
+    line-height: 160%;
+    font-weight: 700;
+}
+table th {
+    text-align: left;
+    color: var(--fc-text1);    
+}
+table th:first-child {
+    border-top-left-radius: .5rem;
+    padding-left: 3rem;
+}
+table th:last-child {
+    border-top-right-radius: .5rem;
+}
+table tbody img {
+    width: 13.2rem;
+    height: 12.5rem;
+    object-fit: cover;
+}
+p {
+    color: var(--fc-text3);
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 2.5rem;
+}
+table tbody tr:nth-child(even) {
+    background-color: hsla(195, 61%, 6%, 0.5);
+}
+table tbody tr:nth-child(odd) {
+    background: hsla(192, 65%, 7%, 1);
+}
+table tbody tr {
+    height: 10.4rem;
+}
+table td {
+    font-family: var(--ff-texting);
+    color: var(--fc-text1);
+    font-size: 2rem;
+    font-weight: 700;
+}
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem;
+}
+td.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+td.user a {
+    text-decoration: none;
+    color: var(--fc-text5);
+}
+td.user a p {
+    font-family: var(--ff-texting);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--fc-text5);
+}
+td.user span {
+    font-family: var(--ff-texting);
+    font-size: 2rem;
+    font-weight: normal;
+    text-decoration: none;
+}
+td.remove {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-weight: 700;
+}
+.no-favorites {
+    display: flex;
+    align-items: center;
+    place-content: center;   
+    background-color: var(--bg-input);
+    gap: 6rem;
+    width: 112rem;
+    height: 62.4rem;
+    border-radius: 0 0 .5rem .5rem;
+}
